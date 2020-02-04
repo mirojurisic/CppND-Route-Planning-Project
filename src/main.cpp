@@ -59,13 +59,13 @@ int main(int argc, const char **argv)
     RouteModel model{osm_data};
    
     float start_x,start_y,end_x,end_y;
-   // std::cout << "set start and end points \n";
-    //std::cin >> start_x>>start_y>>end_x>>end_y;
-  //  RoutePlanner route_planner{model, start_x, start_y,end_x,end_y};
+    std::cout << "set start and end points \n";
+    std::cin >> start_x>>start_y>>end_x>>end_y;
+    RoutePlanner route_planner{model, start_x, start_y,end_x,end_y};
     // Build Model.
     //RoutePlanner route_planner{model, 40, 10,80,90};
 
-    RoutePlanner route_planner{model, 50, 10, 55, 90};
+    //RoutePlanner route_planner{model, 50, 10, 55, 90};
 
     route_planner.AStarSearch();
 
