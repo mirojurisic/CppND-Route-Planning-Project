@@ -56,13 +56,20 @@ int main(int argc, const char **argv)
     // user input for these values using std::cin. Pass the user input to the
     // RoutePlanner object below in place of 10, 10, 90, 90.
 
-    // Build Model.
     RouteModel model{osm_data};
+   
+    float start_x,start_y,end_x,end_y;
+   // std::cout << "set start and end points \n";
+    //std::cin >> start_x>>start_y>>end_x>>end_y;
+  //  RoutePlanner route_planner{model, start_x, start_y,end_x,end_y};
+    // Build Model.
+    //RoutePlanner route_planner{model, 40, 10,80,90};
 
-    // Create RoutePlanner object and perform A* search.
-    RoutePlanner route_planner{model, 10, 10, 90, 90};
+    RoutePlanner route_planner{model, 50, 10, 55, 90};
+
     route_planner.AStarSearch();
 
+  
     std::cout << "Distance: " << route_planner.GetDistance() << " meters. \n";
 
     // Render results of search.
